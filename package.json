@@ -19,5 +19,8 @@
   "homepage": "https://github.com/domonkospapp/snowpack-react#readme",
   "devDependencies": {
     "snowpack": "^3.8.8"
+  },
+  "dependencies": {
+    "preact": "^10.6.4"
   }
 }
