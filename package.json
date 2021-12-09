@@ -1,0 +1,23 @@
+{
+  "name": "snowpack-react",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "snowpack dev",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/domonkospapp/snowpack-react.git"
+  },
+  "author": "Domonkos Papp",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/domonkospapp/snowpack-react/issues"
+  },
+  "homepage": "https://github.com/domonkospapp/snowpack-react#readme",
+  "devDependencies": {
+    "snowpack": "^3.8.8"
+  }
+}
