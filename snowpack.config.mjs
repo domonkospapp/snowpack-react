@@ -8,7 +8,8 @@ export default {
   ],
   plugins: [
     ['@canarise/snowpack-eslint-plugin', {
-      globs: ['src/**/*.js', 'src/**/*.js'],
+      globs: ['src/**/*.js'],
+      options: { },
       formatter: 'stylish',
     }],
   ],
