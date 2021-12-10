@@ -4,7 +4,7 @@ import { collection, onSnapshot } from 'firebase/firestore';
 import db from '../utils/firebase';
 
 const ShopPage = () => {
-  const [books, setBooks] = useState([]);
+  const [books, setBooks] = useState(null);
   const collectionRef = collection(db, 'books');
 
   const updateBooks = (snapshot) => {
@@ -21,7 +21,7 @@ const ShopPage = () => {
 
   return (html`
     <h2>List of books</h2>
-    ${books.map(renderBook)}
+    ${books ? books.map(renderBook) : 'Loading...'}
   `);
 };
 
