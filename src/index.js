@@ -1,5 +1,22 @@
-import { h, render } from 'preact';
+import { render } from 'preact';
+import { html } from 'htm/preact';
+import { Router } from 'preact-router';
+import HomePage from './routes/HomePage';
+import Menu from './components/Menu'
+import ShopPage from './routes/ShopPage';
+import ContactPage from './routes/ContactPage';
 
-const app = h('h1', null, 'Hello World!');
+const App =  () => {
+  return (
+    html`
+      <h1>Book Shop</h1>
+      <${Menu} /><br />
+      <${Router}>
+        <${HomePage} path="/" />
+        <${ShopPage} path="/shop" />
+        <${ContactPage} path="/contact" />
+      <//>
+    `);
+}
 
-render(app, document.body);
+render(html`<${App} />`, document.body);
