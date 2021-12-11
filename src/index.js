@@ -5,6 +5,7 @@ import HomePage from './routes/HomePage';
 import Menu from './components/Menu';
 import ShopPage from './routes/ShopPage';
 import ContactPage from './routes/ContactPage';
+import BookDetailsPage from './routes/BookDetailsPage';
 
 const App = () => (
   html`
@@ -12,7 +13,8 @@ const App = () => (
       <${Menu} /><br />
       <${Router}>
         <${HomePage} path="/" />
-        <${ShopPage} path="/shop" />
+        <${ShopPage} path="/shop/" />
+        <${BookDetailsPage} path="/shop/:bookId" />
         <${ContactPage} path="/contact" />
       <//>
     `);

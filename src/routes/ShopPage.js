@@ -1,6 +1,7 @@
 import { html } from 'htm/preact';
 import { useState, useEffect } from 'preact/hooks';
 import { collection, onSnapshot } from 'firebase/firestore';
+import { route } from 'preact-router';
 import db from '../utils/firebase';
 
 const ShopPage = () => {
@@ -16,7 +17,9 @@ const ShopPage = () => {
   }, []);
 
   const renderBook = (book) => (html`
-    <p>${book.title} ${book.author}</p>`
+    <p>${book.title} ${book.author}</p>
+    <button onClick=${() => route(`shop/${book.id}`)}>Open</button>
+    `
   );
 
   return (html`
