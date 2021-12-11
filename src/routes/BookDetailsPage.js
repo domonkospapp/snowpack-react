@@ -3,6 +3,7 @@ import { useState, useEffect } from 'preact/hooks';
 import { onSnapshot, doc } from 'firebase/firestore';
 import { route } from 'preact-router';
 import db from '../utils/firebase';
+import BookDetails from '../components/BookDetails';
 
 const BookDetailsPage = ({ bookId }) => {
   const [book, setBook] = useState(null);
@@ -16,7 +17,7 @@ const BookDetailsPage = ({ bookId }) => {
 
   return (html`
     <h2>Book details</h2>
-    ${book ? `Title: ${book.title} Author: ${book.author}` : 'Loading...'}<br />
+    ${book ? html`<${BookDetails} book=${book} />` : 'Loading...'}<br />
     <button onClick=${navigateBack}>Back</button>
   `);
 };
